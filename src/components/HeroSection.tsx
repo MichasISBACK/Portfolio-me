@@ -97,7 +97,7 @@ const HeroSection = () => {
           
           <div className="flex space-x-4 animate-fade-in delay-300">
             <a href="#contact" className="btn-primary">
-              Entre em contato: +55 (41) 98835-3340
+              Entre em contato: 55 (41) 98835-3340
             </a>
             <a href="#projects" className="btn-outline">
               Ver projetos
