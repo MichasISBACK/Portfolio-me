@@ -11,47 +11,19 @@ interface TimelineItem {
 
 const timelineData: TimelineItem[] = [
   {
-    year: "2022 - Presente",
-    title: "Desenvolvedor Sênior Full Stack",
-    subtitle: "Empresa XYZ",
-    description: "Liderando o desenvolvimento de aplicações web escaláveis e atuando como referência técnica para a equipe. Implementando arquiteturas baseadas em microserviços e práticas DevOps.",
+    year: "2023 - Presente",
+    title: "Estágio na TI",
+    subtitle: "Prefeitura de Paranaguá",
+    description: "Liderando o desenvolvimento de aplicações web escaláveis e atuando como referência técnica para a equipe.",
     isEducation: false
   },
   {
-    year: "2020 - 2022",
-    title: "Desenvolvedor Full Stack",
-    subtitle: "Startup ABC",
-    description: "Desenvolvimento full stack de uma plataforma SaaS utilizando React, Node.js e MongoDB. Participação ativa em todas as fases do ciclo de desenvolvimento.",
-    isEducation: false
-  },
-  {
-    year: "2019 - 2020",
-    title: "Desenvolvedor Frontend",
-    subtitle: "Agência Digital XYZ",
-    description: "Criação de interfaces responsivas e interativas para diversos clientes utilizando React, Vue.js e práticas modernas de CSS.",
-    isEducation: false
-  },
-  {
-    year: "2018 - 2019",
-    title: "Estágio em Desenvolvimento Web",
-    subtitle: "Empresa XYZ",
-    description: "Primeiro contato profissional com desenvolvimento web, aprendendo as bases de HTML, CSS, JavaScript e PHP em projetos reais.",
-    isEducation: false
-  },
-  {
-    year: "2016 - 2020",
-    title: "Bacharelado em Ciência da Computação",
-    subtitle: "Universidade XYZ",
+    year: "2023 - 2027",
+    title: "Bacharelado em Sistemas de Informação",
+    subtitle: "Instituto Superior do Litoral do Paraná",
     description: "Formação completa com ênfase em desenvolvimento de software, algoritmos e estruturas de dados. Projeto de conclusão focado em aplicações web progressivas.",
     isEducation: true
   },
-  {
-    year: "2021",
-    title: "Especialização em Arquitetura de Software",
-    subtitle: "Instituto XYZ",
-    description: "Aprofundamento em padrões de design, arquiteturas escaláveis e boas práticas de desenvolvimento.",
-    isEducation: true
-  }
 ];
 
 const TimelineSection = () => {
