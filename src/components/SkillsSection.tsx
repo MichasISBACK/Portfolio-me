@@ -13,9 +13,9 @@ const skills: Skill[] = [
   {
     category: "Linguagens de Programação",
     items: [
-      { name: "JavaScript", level: 90 },
-      { name: "TypeScript", level: 85 },
-      { name: "Python", level: 75 },
+      { name: "JavaScript", level: 70 },
+      { name: "TypeScript", level: 80 },
+      { name: "Python", level: 60 },
       { name: "PHP", level: 70 },
       { name: "Java", level: 60 }
     ]
@@ -24,10 +24,9 @@ const skills: Skill[] = [
     category: "Frontend",
     items: [
       { name: "HTML/CSS", level: 95 },
-      { name: "React", level: 90 },
-      { name: "Vue.js", level: 80 },
+      { name: "React", level: 50 },
       { name: "Angular", level: 70 },
-      { name: "TailwindCSS", level: 85 }
+      { name: "TailwindCSS", level: 75 }
     ]
   },
   {
@@ -35,7 +34,6 @@ const skills: Skill[] = [
     items: [
       { name: "Node.js", level: 85 },
       { name: "Express", level: 85 },
-      { name: "Django", level: 70 },
       { name: "Laravel", level: 65 },
       { name: "Spring Boot", level: 60 }
     ]
@@ -43,11 +41,11 @@ const skills: Skill[] = [
   {
     category: "Ferramentas & Outros",
     items: [
-      { name: "Git", level: 90 },
-      { name: "Docker", level: 80 },
-      { name: "CI/CD", level: 75 },
+      { name: "Git", level: 78 },
+      { name: "Docker", level: 74 },
+      { name: "CI/CD", level: 65 },
       { name: "AWS", level: 70 },
-      { name: "Agile/Scrum", level: 85 }
+      { name: "Agile/Scrum", level: 72 }
     ]
   }
 ];
