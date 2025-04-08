@@ -135,9 +135,8 @@ io.on('connection', (socket) => {
     title: "Dashboard Analytics",
     description: "Dashboard para visualização de dados de negócios com gráficos interativos e relatórios exportáveis.",
     image: "/placeholder.svg",
-    tags: ["React", "Chart.js", "Node.js", "PostgreSQL", "Material UI"],
+    tags: ["React", "Node.js", "PostgreSQL", "Material UI"],
     githubUrl: "https://github.com",
-    demoUrl: "https://example.com"
   }
 ];
 
