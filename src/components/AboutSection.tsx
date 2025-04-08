@@ -20,7 +20,7 @@ const AboutSection = () => {
               combinando habilidades técnicas com uma mentalidade orientada a resultados.
             </p>
             <p className="text-foreground/80 leading-relaxed">
-              Minha jornada começou com [descreva seu início na área]. Desde então, tenho trabalhado em diversos
+              Minha jornada começou sendo Estágiario de Suporte de TI. Desde então, tenho trabalhado em diversos
               projetos desafiadores que me permitiram expandir meu conhecimento e aprimorar minhas habilidades em
               desenvolvimento de software.
             </p>
