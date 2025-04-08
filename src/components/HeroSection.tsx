@@ -11,7 +11,7 @@ const HeroSection = () => {
   useEffect(() => {
     // Simulate a typing effect
     if (typingRef.current) {
-      const phrases = ['Desenvolvedor Backend', 'Aprendizado de Máquina (Machine Learning)', 'Ciência de dados', 'Especialista em Web'];
+      const phrases = ['Desenvolvedor Back-end', 'Machine Learning', 'Ciência de dados', 'Especialista em Web'];
       let currentPhrase = 0;
       let currentChar = 0;
       let isDeleting = false;
