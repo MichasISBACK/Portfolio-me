@@ -24,7 +24,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://github.com" 
+                href="https://github.com/MichasISBACK" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-2 rounded-full bg-white/10 hover:bg-primary/80 transition-colors"
@@ -32,7 +32,7 @@ const Footer = () => {
                 <Github size={18} />
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/in/luis-michaud-552625272/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-2 rounded-full bg-white/10 hover:bg-primary/80 transition-colors"
@@ -40,7 +40,7 @@ const Footer = () => {
                 <Linkedin size={18} />
               </a>
               <a 
-                href="https://twitter.com" 
+                href="https://x.com/luis_michaud1" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-2 rounded-full bg-white/10 hover:bg-primary/80 transition-colors"
@@ -48,7 +48,7 @@ const Footer = () => {
                 <Twitter size={18} />
               </a>
               <a 
-                href="mailto:exemplo@email.com" 
+                href="mailto:devluism1@gmail.com" 
                 className="p-2 rounded-full bg-white/10 hover:bg-primary/80 transition-colors"
               >
                 <Mail size={18} />
@@ -75,16 +75,16 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contato</h4>
             <ul className="space-y-3 text-white/70">
-              <li>São Paulo, Brasil</li>
-              <li>seuemail@exemplo.com</li>
-              <li>+55 (11) 98765-4321</li>
+              <li>Paranguá, Brasil</li>
+              <li>devluism1@gmail.com</li>
+              <li>+55 (41) 98835-3340</li>
             </ul>
           </div>
         </div>
         
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/50 text-sm">
-            &copy; {new Date().getFullYear()} Seu Nome. Todos os direitos reservados.
+            &copy; {new Date().getFullYear()} Luis Eduardo Carvalho Michaud. Todos os direitos reservados.
           </p>
           
           <button 
