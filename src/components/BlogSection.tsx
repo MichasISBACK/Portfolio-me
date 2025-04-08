@@ -24,26 +24,6 @@ const articles: Article[] = [
     category: "Segurança",
     image: "/placeholder.svg"
   },
-  {
-    id: 2,
-    title: "Otimizando o desempenho de aplicações React com useMemo e useCallback",
-    excerpt: "Aprenda a evitar renderizações desnecessárias e melhorar o desempenho utilizando os hooks de memorização do React.",
-    date: "28 Fev 2023",
-    author: "Seu Nome",
-    readTime: "6 min",
-    category: "React",
-    image: "/placeholder.svg"
-  },
-  {
-    id: 3,
-    title: "Criando uma API RESTful com Node.js, Express e MongoDB",
-    excerpt: "Um tutorial passo a passo para desenvolver uma API completa seguindo os princípios REST e as melhores práticas.",
-    date: "10 Jan 2023",
-    author: "Seu Nome",
-    readTime: "10 min",
-    category: "Backend",
-    image: "/placeholder.svg"
-  }
 ];
 
 const BlogSection = () => {
@@ -55,8 +35,7 @@ const BlogSection = () => {
         </h2>
         <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-6 rounded-full"></div>
         <p className="text-center text-foreground/70 max-w-2xl mx-auto mb-12">
-          Compartilho regularmente artigos técnicos sobre desenvolvimento, arquitetura de software
-          e boas práticas em tecnologia.
+          Compartilho regularmente artigos técnicos sobre desenvolvimento e boas práticas em tecnologia.
         </p>
         
         <div className="grid md:grid-cols-3 gap-8">
