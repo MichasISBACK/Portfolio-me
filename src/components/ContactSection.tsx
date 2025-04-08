@@ -85,7 +85,7 @@ const ContactSection = () => {
     <section id="contact" className="section-padding bg-tech-gray/50">
       <div className="container mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold font-poppins text-center mb-4">
-          Entre em <span className="text-primary">Contato</span>
+          Entre em <span className="text-primary">Contato </span>
         </h2>
         <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-6 rounded-full"></div>
         <p className="text-center text-foreground/70 max-w-2xl mx-auto mb-12">
@@ -106,7 +106,7 @@ const ContactSection = () => {
                   <div>
                     <h4 className="font-medium">Email</h4>
                     <a href="mailto:seuemail@exemplo.com" className="text-foreground/70 hover:text-primary transition-colors">
-                      seuemail@exemplo.com
+                     devluism1@gmail.com
                     </a>
                   </div>
                 </div>
@@ -118,7 +118,7 @@ const ContactSection = () => {
                   <div>
                     <h4 className="font-medium">Telefone</h4>
                     <a href="tel:+5511987654321" className="text-foreground/70 hover:text-primary transition-colors">
-                      +55 (11) 98765-4321
+                      +55 (41) 98835-3340
                     </a>
                   </div>
                 </div>
@@ -130,7 +130,7 @@ const ContactSection = () => {
                   <div>
                     <h4 className="font-medium">Localização</h4>
                     <p className="text-foreground/70">
-                      São Paulo, Brasil
+                      Paranaguá, Brasil
                     </p>
                   </div>
                 </div>
