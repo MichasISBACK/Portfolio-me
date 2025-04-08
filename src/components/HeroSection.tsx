@@ -11,7 +11,7 @@ const HeroSection = () => {
   useEffect(() => {
     // Simulate a typing effect
     if (typingRef.current) {
-      const phrases = ['Desenvolvedor Full Stack', 'Arquiteto de Software', 'Especialista em Web'];
+      const phrases = ['Desenvolvedor Backend', 'Aprendizado de Máquina (Machine Learning)', 'Ciência de dados', 'Especialista em Web'];
       let currentPhrase = 0;
       let currentChar = 0;
       let isDeleting = false;
@@ -80,7 +80,7 @@ const HeroSection = () => {
             className="text-4xl md:text-5xl lg:text-6xl font-bold font-poppins leading-tight animate-fade-in"
           >
             Olá, sou<br />
-            <span className="text-primary">Seu Nome</span>
+            <span className="text-primary">Luis Eduardo Michaud</span>
           </h1>
           
           <div className="flex items-center h-12">
@@ -97,7 +97,7 @@ const HeroSection = () => {
           
           <div className="flex space-x-4 animate-fade-in delay-300">
             <a href="#contact" className="btn-primary">
-              Entre em contato
+              Entre em contato: +55 (41) 98835-3340
             </a>
             <a href="#projects" className="btn-outline">
               Ver projetos
@@ -106,7 +106,7 @@ const HeroSection = () => {
           
           <div className="flex space-x-4 pt-4 animate-fade-in delay-500">
             <a 
-              href="https://github.com" 
+              href="https://github.com/MichasISBACK" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-2 rounded-full border border-foreground/20 hover:border-primary hover:text-primary transition-colors"
@@ -114,7 +114,7 @@ const HeroSection = () => {
               <Github size={20} />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/luis-michaud-552625272/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-2 rounded-full border border-foreground/20 hover:border-primary hover:text-primary transition-colors"
@@ -122,7 +122,7 @@ const HeroSection = () => {
               <Linkedin size={20} />
             </a>
             <a 
-              href="mailto:exemplo@email.com" 
+              href="mailto:devluism1@gmail.com" 
               className="p-2 rounded-full border border-foreground/20 hover:border-primary hover:text-primary transition-colors"
             >
               <Mail size={20} />
