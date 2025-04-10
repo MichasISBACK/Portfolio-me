@@ -130,7 +130,7 @@ const ContactSection = () => {
                   <div>
                     <h4 className="font-medium">Localização</h4>
                     <p className="text-foreground/70">
-                      Paranaguá, Brasil
+                      Paranaguá, Paraná, Brasil.
                     </p>
                   </div>
                 </div>
@@ -145,7 +145,7 @@ const ContactSection = () => {
                       href={`https://${social}.com`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-9 h-9 rounded-full bg-tech-gray flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                      className="w-9 h-9 rounded-full bg-tech-black flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
                     >
                       <span className="sr-only">{social}</span>
                       <div className="w-4 h-4"></div>
