@@ -70,7 +70,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <a href="#home" className="text-2xl font-bold font-poppins text-primary">
-          Dev<span className="text-secondary">Portfolio</span>
+          Port<span className="text-secondary">folio</span>
         </a>
         
         {/* Desktop Menu */}
