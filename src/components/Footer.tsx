@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <h3 className="text-2xl font-bold font-poppins mb-4">
-              Dev<span className="text-primary">Portfolio</span>
+              Port<span className="text-primary">folio</span>
             </h3>
             <p className="text-white/70 mb-6 max-w-md">
               Desenvolvedor apaixonado por criar soluções digitais elegantes e eficientes.
