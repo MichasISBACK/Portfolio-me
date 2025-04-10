@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils';
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: '',
-    email: '', 
+    email: '',
     subject: '',
     message: ''
   });
@@ -111,7 +111,32 @@ const ContactSection = () => {
                   </div>
                 </div>
                 
-                <div className="mt-8 pt-6 border-t border-gray-100">
+                <div className="flex items-start">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4 mt-1">
+                    <Phone className="text-primary" size={18} />
+                  </div>
+                  <div>
+                    <h4 className="font-medium">Telefone</h4>
+                    <a href="tel:+554198835-3340" className="text-foreground/70 hover:text-primary transition-colors">
+                      +55 (41) 98835-3340
+                    </a>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4 mt-1">
+                    <MapPin className="text-primary" size={18} />
+                  </div>
+                  <div>
+                    <h4 className="font-medium">Localização</h4>
+                    <p className="text-foreground/70">
+                      Paranaguá, Paraná, Brasil.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-8 pt-6 border-t border-gray-100">
                 <h4 className="font-medium mb-4">Me encontre nas redes</h4>
                 <div className="flex space-x-3">
                   {['github', 'linkedin', 'twitter', 'instagram'].map((social) => (
@@ -129,7 +154,6 @@ const ContactSection = () => {
                 </div>
               </div>
             </div>
-             
             
             <div className="bg-gradient-to-br from-primary to-secondary text-white p-6 rounded-xl shadow-sm">
               <h3 className="text-xl font-semibold mb-3">Vamos trabalhar juntos?</h3>
