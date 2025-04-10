@@ -138,21 +138,22 @@ const ContactSection = () => {
               
               <div className="mt-8 pt-6 border-t border-gray-100">
                 <h4 className="font-medium mb-4">Me encontre nas redes</h4>
-                <div className="flex space-x-3">
-                  {['github', 'linkedin', 'twitter', 'instagram'].map((social) => (
-                    <a 
+                  <div className="flex space-x-3">
+                    {['github', 'linkedin', 'twitter', 'instagram'].map((social) => (
+                  <a
                       key={social}
                       href={`https://${social}.com`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-9 h-9 rounded-full bg-tech-white flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                      className="group w-9 h-9 rounded-full bg-tech-gray flex items-center justify-center hover:bg-primary transition-colors"
                     >
-                      <span className="sr-only">{social}</span>
-                      <div className="w-4 h-4"></div>
-                    </a>
-                  ))}
-                </div>
-              </div>
+                  <span className="sr-only">{social}</span>
+                {socialIcons[social as keyof typeof socialIcons]}
+            </a>
+    ))}
+  </div>
+</div>
+
             </div>
             
             <div className="bg-gradient-to-br from-primary to-secondary text-white p-6 rounded-xl shadow-sm">
