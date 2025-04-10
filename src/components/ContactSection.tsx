@@ -135,7 +135,14 @@ const ContactSection = () => {
                   </div>
                 </div>
               </div>
-              
+
+              const socialIcons = {
+  github: <Github className="w-4 h-4 text-gray-700 group-hover:text-white" />,
+  linkedin: <Linkedin className="w-4 h-4 text-blue-700 group-hover:text-white" />,
+  twitter: <Twitter className="w-4 h-4 text-sky-500 group-hover:text-white" />,
+  instagram: <Instagram className="w-4 h-4 text-pink-500 group-hover:text-white" />,
+};
+
               <div className="mt-8 pt-6 border-t border-gray-100">
                 <h4 className="font-medium mb-4">Me encontre nas redes</h4>
                   <div className="flex space-x-3">
