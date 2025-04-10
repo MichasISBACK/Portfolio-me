@@ -136,24 +136,39 @@ const ContactSection = () => {
                 </div>
               </div>
               
-              <div className="mt-8 pt-6 border-t border-gray-100">
-                <h4 className="font-medium mb-4">Me encontre nas redes</h4>
-                <div className="flex space-x-3">
-                  {['github', 'linkedin', 'twitter', 'instagram'].map((social) => (
-                    <a 
-                      key={social}
-                      href={`https://${social}.com`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-9 h-9 rounded-full bg-tech-gray flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
-                    >
-                      <span className="sr-only">{social}</span>
-                      <div className="w-4 h-4"></div>
-                    </a>
-                  ))}
-                </div>
-              </div>
+             <div className="flex space-x-4">
+              <a 
+                href="https://github.com/MichasISBACK" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 rounded-full bg-white/10 hover:bg-primary/80 transition-colors"
+              >
+                <Github size={18} />
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/luis-michaud-552625272/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 rounded-full bg-white/10 hover:bg-primary/80 transition-colors"
+              >
+                <Linkedin size={18} />
+              </a>
+              <a 
+                href="https://x.com/luis_michaud1" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 rounded-full bg-white/10 hover:bg-primary/80 transition-colors"
+              >
+                <Twitter size={18} />
+              </a>
+              <a 
+                href="mailto:devluism1@gmail.com" 
+                className="p-2 rounded-full bg-white/10 hover:bg-primary/80 transition-colors"
+              >
+                <Mail size={18} />
+              </a>
             </div>
+          </div>
             
             <div className="bg-gradient-to-br from-primary to-secondary text-white p-6 rounded-xl shadow-sm">
               <h3 className="text-xl font-semibold mb-3">Vamos trabalhar juntos?</h3>
