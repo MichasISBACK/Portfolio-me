@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils';
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
+    email: '', 
     subject: '',
     message: ''
   });
