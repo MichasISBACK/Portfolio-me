@@ -12,8 +12,8 @@ const skills: Skill[] = [
   {
     category: "Linguagens de Programação",
     items: [
-      { name: "JavaScript", level: 90 },
-      { name: "TypeScript", level: 85 },
+      { name: "JavaScript", level: 50 },
+      { name: "TypeScript", level: 75 },
       { name: "Python", level: 75 },
       { name: "PHP", level: 70 },
       { name: "Java", level: 60 }
@@ -22,19 +22,19 @@ const skills: Skill[] = [
   {
     category: "Frontend",
     items: [
-      { name: "HTML/CSS", level: 95 },
-      { name: "React", level: 90 },
-      { name: "Vue.js", level: 80 },
-      { name: "Angular", level: 70 },
-      { name: "TailwindCSS", level: 85 }
+      { name: "HTML/CSS", level: 60 },
+      { name: "React", level: 75 },
+      { name: "Vue.js", level: 60 },
+      { name: "Angular", level: 40 },
+      { name: "TailwindCSS", level: 70 }
     ]
   },
   {
     category: "Backend",
     items: [
-      { name: "Node.js", level: 85 },
-      { name: "Express", level: 85 },
-      { name: "Django", level: 70 },
+      { name: "Node.js", level: 75 },
+      { name: "Express", level: 65 },
+      { name: "Django", level: 60 },
       { name: "Laravel", level: 65 },
       { name: "Spring Boot", level: 60 }
     ]
@@ -42,8 +42,8 @@ const skills: Skill[] = [
   {
     category: "Ferramentas & Outros",
     items: [
-      { name: "Git", level: 90 },
-      { name: "Docker", level: 80 },
+      { name: "Git", level: 60 },
+      { name: "Docker", level: 50 },
       { name: "CI/CD", level: 75 },
       { name: "AWS", level: 70 },
       { name: "Agile/Scrum", level: 85 }
@@ -128,7 +128,7 @@ const SkillsSection = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { name: "Agile/Scrum", icon: "📊" },
-              { name: "TDD", icon: "🧪" },
+              { name: "TDD/BDD", icon: "🧪" },
               { name: "CI/CD", icon: "🔄" },
               { name: "Clean Code", icon: "✨" },
               { name: "Microservices", icon: "🧩" },
