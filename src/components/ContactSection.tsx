@@ -145,7 +145,7 @@ const ContactSection = () => {
                       href={`https://${social}.com`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-9 h-9 rounded-full bg-tech-gray flex items-center justify-center hover:bg-primary hover:text-black transition-colors"
+                      className="w-9 h-9 rounded-full bg-tech-white flex items-center justify-center hover:bg-primary hover:text-gray transition-colors"
                     >
                       <span className="sr-only">{social}</span>
                       <div className="w-4 h-4"></div>
