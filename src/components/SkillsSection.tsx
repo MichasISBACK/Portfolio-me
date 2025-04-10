@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface TimelineItem {
@@ -104,6 +103,7 @@ const TimelineSection = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
+  
             ].map((cert, index) => (
               <div key={index} className="border border-gray-100 p-4 rounded-lg text-center">
                 <h4 className="font-medium mb-1">{cert.name}</h4>
