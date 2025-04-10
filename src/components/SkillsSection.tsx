@@ -1,113 +1,148 @@
-import React from 'react';
 
-interface TimelineItem {
-  year: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  isEducation: boolean;
+import React, { useEffect, useRef } from 'react';
+
+interface Skill {
+  category: string;
+  items: {
+    name: string;
+    level: number;
+  }[];
 }
 
-const timelineData: TimelineItem[] = [
+const skills: Skill[] = [
   {
-    year: "2023 - Presente",
-    title: "Estágio na TI",
-    subtitle: "Prefeitura de Paranaguá",
-    description: "Liderando o desenvolvimento de aplicações web escaláveis e atuando como referência técnica para a equipe.",
-    isEducation: false
+    category: "Linguagens de Programação",
+    items: [
+      { name: "JavaScript", level: 90 },
+      { name: "TypeScript", level: 85 },
+      { name: "Python", level: 75 },
+      { name: "PHP", level: 70 },
+      { name: "Java", level: 60 }
+    ]
   },
   {
-    year: "2023 - 2027",
-    title: "Bacharelado em Sistemas de Informação",
-    subtitle: "Instituto Superior do Litoral do Paraná",
-    description: "Formação completa com ênfase em desenvolvimento de software, algoritmos e estruturas de dados. Projeto de conclusão focado em aplicações web progressivas.",
-    isEducation: true
+    category: "Frontend",
+    items: [
+      { name: "HTML/CSS", level: 95 },
+      { name: "React", level: 90 },
+      { name: "Vue.js", level: 80 },
+      { name: "Angular", level: 70 },
+      { name: "TailwindCSS", level: 85 }
+    ]
   },
+  {
+    category: "Backend",
+    items: [
+      { name: "Node.js", level: 85 },
+      { name: "Express", level: 85 },
+      { name: "Django", level: 70 },
+      { name: "Laravel", level: 65 },
+      { name: "Spring Boot", level: 60 }
+    ]
+  },
+  {
+    category: "Ferramentas & Outros",
+    items: [
+      { name: "Git", level: 90 },
+      { name: "Docker", level: 80 },
+      { name: "CI/CD", level: 75 },
+      { name: "AWS", level: 70 },
+      { name: "Agile/Scrum", level: 85 }
+    ]
+  }
 ];
 
-const TimelineSection = () => {
-  // Separar dados por categoria
-  const experiences = timelineData.filter(item => !item.isEducation);
-  const education = timelineData.filter(item => item.isEducation);
+const SkillsSection = () => {
+  const skillsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const progressBars = document.querySelectorAll('.skill-progress');
+            progressBars.forEach((bar: Element) => {
+              const progressBar = bar as HTMLElement;
+              const width = progressBar.getAttribute('data-progress') || '0';
+              setTimeout(() => {
+                progressBar.style.transform = `scaleX(${parseInt(width) / 100})`;
+              }, 200);
+            });
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (skillsRef.current) {
+      observer.observe(skillsRef.current);
+    }
+
+    return () => {
+      if (skillsRef.current) {
+        observer.unobserve(skillsRef.current);
+      }
+    };
+  }, []);
 
   return (
-    <section id="timeline" className="section-padding bg-tech-gray/50">
+    <section id="skills" className="section-padding bg-white">
       <div className="container mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold font-poppins text-center mb-4">
-          Minha <span className="text-primary">Trajetória</span>
+          Minhas <span className="text-primary">Habilidades</span>
         </h2>
         <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-6 rounded-full"></div>
         <p className="text-center text-foreground/70 max-w-2xl mx-auto mb-12">
-          Confira minha experiência profissional e formação acadêmica ao longo dos anos.
+          Como profissional de TI, desenvolvi um conjunto diversificado de habilidades técnicas
+          que me permitem enfrentar desafios complexos e entregar soluções de alta qualidade.
         </p>
         
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Experiência Profissional */}
-          <div>
-            <h3 className="text-xl font-semibold mb-6 flex items-center">
-              <span className="bg-primary text-white p-2 rounded-lg mr-2">💼</span>
-              Experiência Profissional
-            </h3>
-            
-            <div className="relative pl-8 border-l border-primary/30">
-              {experiences.map((item, index) => (
-                <div key={index} className="mb-10 relative">
-                  <div className="timeline-dot"></div>
-                  {index !== experiences.length - 1 && <div className="timeline-connector"></div>}
-                  
-                  <div className="bg-white p-5 rounded-lg shadow-sm ml-6 border border-gray-100">
-                    <div className="text-sm font-medium text-primary mb-1">
-                      {item.year}
+        <div ref={skillsRef} className="grid md:grid-cols-2 gap-8 lg:gap-12">
+          {skills.map((skill, index) => (
+            <div key={index} className="bg-tech-gray/30 p-6 rounded-xl">
+              <h3 className="text-xl font-semibold mb-4">{skill.category}</h3>
+              
+              <div className="space-y-5">
+                {skill.items.map((item, idx) => (
+                  <div key={idx}>
+                    <div className="flex justify-between mb-1">
+                      <span className="text-sm font-medium">{item.name}</span>
+                      <span className="text-sm text-foreground/70">{item.level}%</span>
                     </div>
-                    <h4 className="text-lg font-semibold mb-1">{item.title}</h4>
-                    <div className="text-foreground/70 text-sm mb-3">{item.subtitle}</div>
-                    <p className="text-foreground/80 text-sm">{item.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          
-          {/* Educação */}
-          <div>
-            <h3 className="text-xl font-semibold mb-6 flex items-center">
-              <span className="bg-secondary text-white p-2 rounded-lg mr-2">🎓</span>
-              Formação Acadêmica
-            </h3>
-            
-            <div className="relative pl-8 border-l border-secondary/30">
-              {education.map((item, index) => (
-                <div key={index} className="mb-10 relative">
-                  <div className="absolute left-0 w-4 h-4 bg-secondary rounded-full transform -translate-x-1/2"></div>
-                  {index !== education.length - 1 && (
-                    <div className="absolute left-0 top-4 h-full w-0.5 bg-secondary/20 transform -translate-x-1/2"></div>
-                  )}
-                  
-                  <div className="bg-white p-5 rounded-lg shadow-sm ml-6 border border-gray-100">
-                    <div className="text-sm font-medium text-secondary mb-1">
-                      {item.year}
+                    <div className="skill-bar">
+                      <div 
+                        className="skill-progress" 
+                        data-progress={item.level}
+                        style={{ transform: 'scaleX(0)' }}
+                      ></div>
                     </div>
-                    <h4 className="text-lg font-semibold mb-1">{item.title}</h4>
-                    <div className="text-foreground/70 text-sm mb-3">{item.subtitle}</div>
-                    <p className="text-foreground/80 text-sm">{item.description}</p>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
+          ))}
         </div>
         
-        {/* Certificações */}
-        <div className="mt-12 bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-          <h3 className="text-xl font-semibold mb-4 text-center">Certificações</h3>
+        <div className="mt-16">
+          <h3 className="text-xl font-semibold text-center mb-8">Metodologias & Abordagens</h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-  
-            ].map((cert, index) => (
-              <div key={index} className="border border-gray-100 p-4 rounded-lg text-center">
-                <h4 className="font-medium mb-1">{cert.name}</h4>
-                <p className="text-sm text-foreground/70">{cert.issuer} • {cert.year}</p>
+              { name: "Agile/Scrum", icon: "📊" },
+              { name: "TDD", icon: "🧪" },
+              { name: "CI/CD", icon: "🔄" },
+              { name: "Clean Code", icon: "✨" },
+              { name: "Microservices", icon: "🧩" },
+              { name: "DevOps", icon: "🛠️" },
+              { name: "UX Design", icon: "🎨" },
+              { name: "Responsive Design", icon: "📱" }
+            ].map((method, index) => (
+              <div 
+                key={index} 
+                className="bg-white p-4 rounded-lg text-center border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div className="text-3xl mb-2">{method.icon}</div>
+                <h4 className="font-medium">{method.name}</h4>
               </div>
             ))}
           </div>
@@ -117,4 +152,4 @@ const TimelineSection = () => {
   );
 };
 
-export default TimelineSection;
+export default SkillsSection;
