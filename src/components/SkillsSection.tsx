@@ -104,9 +104,6 @@ const TimelineSection = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
-              { name: "AWS Certified Developer", year: "2022", issuer: "Amazon Web Services" },
-              { name: "Professional Scrum Master I", year: "2021", issuer: "Scrum.org" },
-              { name: "React Developer Certification", year: "2020", issuer: "Meta" }
             ].map((cert, index) => (
               <div key={index} className="border border-gray-100 p-4 rounded-lg text-center">
                 <h4 className="font-medium mb-1">{cert.name}</h4>
