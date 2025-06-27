@@ -15,12 +15,12 @@ interface Article {
 const articles: Article[] = [
   {
     id: 1,
-    title: "Como implementar autenticação JWT em aplicações React e Node.js",
-    excerpt: "Um guia completo sobre como criar um sistema de autenticação seguro com JSON Web Tokens em sua aplicação fullstack.",
-    date: "15 Mar 2023",
-    author: "Seu Nome",
+    title: "BigData No Futebol: Como a Análise de Dados Está Moldando o Futuro do Futebol",
+    excerpt: "Este trabalho explora como a análise de grandes volumes de dados vem moldando o futuro do futebol, conectando tecnologia, tática e performance em alto nível.",
+    date: "06 Abril 2025",
+    author: "Luis Eduardo Carvalho Michaud",
     readTime: "8 min",
-    category: "Segurança",
+    category: "BigData",
     image: "/placeholder.svg"
   },
 ];
@@ -68,7 +68,7 @@ const BlogSection = () => {
                 </p>
                 
                 <a 
-                  href="#" 
+                  href="https://docs.google.com/document/d/123no6hjhmqBTxenNIWej1fh9C814eXoWlfsHaXg-ly8/edit?usp=sharing" 
                   className="inline-flex items-center text-primary hover:text-primary/80 text-sm font-medium transition-colors"
                 >
                   Ler artigo 
