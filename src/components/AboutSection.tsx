@@ -30,7 +30,8 @@ const AboutSection = () => {
               novas maneiras de aplicar meu conhecimento para criar soluções inovadoras.
             </p>
             
-            <a href="/curriculo.pdf" download="Luis-Michaud-Curriculo.pdf"
+            <a href="/Curriculo.pdf" 
+            download="Curriculo.pdf"
              className="btn-outline inline-flex items-center gap-2 mt-4">
             <DownloadCloud size={18} />
             Baixar Currículo
