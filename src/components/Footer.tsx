@@ -74,7 +74,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contato</h4>
             <ul className="space-y-3 text-white/70">
-              <li>Paranguá, Brasil</li>
+              <li>Paranaguá, Brasil</li>
               <li>devluism1@gmail.com</li>
               <li>+55 (41) 98835-3340</li>
             </ul>
