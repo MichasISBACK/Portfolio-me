@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Send, Mail, MapPin, Phone } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -176,10 +175,8 @@ const ContactSection = () => {
                 </div>
               )}
               
-              <form
-                action="https://formsubmit.co/devluism1@gmail.com"
-                method="POST"
-              >
+              <form action="https://formsubmit.co/devluism1@gmail.com" method="POST">
+              
                 <input type="hidden" name="_subject" value="Nova mensagem do portfólio!" />
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_template" value="box" />
@@ -192,12 +189,7 @@ const ContactSection = () => {
                       type="text"
                       id="name"
                       name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      className={cn(
-                        "w-full px-4 py-2 rounded-lg border focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors",
-                        errors.name ? "border-red-300" : "border-gray-200"
-                      )}
+                      className="w-full px-4 py-2 rounded-lg border focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors border-gray-200"
                       placeholder="Seu nome"
                     />
                     {errors.name && (
