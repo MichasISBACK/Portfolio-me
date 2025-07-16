@@ -176,7 +176,15 @@ const ContactSection = () => {
                 </div>
               )}
               
-              <form onSubmit={handleSubmit}>
+              <form
+                action="https://formsubmit.co/devluism1@gmail.com"
+                method="POST"
+              >
+                <input type="hidden" name="_subject" value="Nova mensagem do portfólio!" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="box" />
+                <input type="hidden" name="_next" value="https://portfolioluis.vercel.app/sucesso" />
+
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-1">Nome</label>
