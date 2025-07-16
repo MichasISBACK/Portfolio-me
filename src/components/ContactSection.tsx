@@ -175,8 +175,8 @@ const ContactSection = () => {
                 </div>
               )}
               
-              <form action="https://formsubmit.co/devluism1@gmail.com" method="POST">
-              
+              <form action="https://formsubmit.co/luisbrcarvalho1@gmail.com" method="POST">
+
                 <input type="hidden" name="_subject" value="Nova mensagem do portfólio!" />
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_template" value="box" />
