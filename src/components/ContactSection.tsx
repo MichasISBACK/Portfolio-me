@@ -175,12 +175,11 @@ const ContactSection = () => {
                 </div>
               )}
               
-              <form action="https://formsubmit.co/luisbrcarvalho1@gmail.com" method="POST">
-
+              <form action="https://formsubmit.co/devluism1@gmail.com" method="POST">
                 <input type="hidden" name="_subject" value="Nova mensagem do portfólio!" />
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_template" value="box" />
-                <input type="hidden" name="_next" value="https://portfolioluis.vercel.app/sucesso" />
+                <input type="hidden" name="_next" value="https://portfolioluis-git-main-luis-eduardo-carvalho-michauds-projects.vercel.app" />
 
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div>
