@@ -6,7 +6,7 @@ Um portfólio moderno e responsivo desenvolvido para apresentar meus projetos e 
 
 ## 🔥 Demo
 
-🌐 [Ver Demo Ao Vivo](https://portfolioluis-git-main-luis-eduardo-carvalho-michauds-projects.vercel.app/#)
+🌐 [Ver Portfólio](https://portfolioluis-git-main-luis-eduardo-carvalho-michauds-projects.vercel.app/#)
 
 
 
@@ -35,4 +35,4 @@ Um portfólio moderno e responsivo desenvolvido para apresentar meus projetos e 
 ---
 
 
-Projeto criado e estruturado com ajuda de IA's, para melhor eficiência.
+Projeto criado por Luis Eduardo Carvalho.
