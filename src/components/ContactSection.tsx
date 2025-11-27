@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Send, Mail, MapPin, Phone } from 'lucide-react';
+import { Send, Mail, MapPin, Phone, Github, Linkedin, Twitter, Instagram } from 'lucide-react';
 import { cn } from '@/lib/utils';
+
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -138,7 +139,7 @@ const ContactSection = () => {
               <div className="mt-8 pt-6 border-t border-gray-100">
                 <h4 className="font-medium mb-4">Me encontre nas redes</h4>
                 <div className="flex space-x-3">
-                  {['github', 'linkedin', 'twitter', 'instagram'].map((social) => (
+                    {['github', 'linkedin', 'twitter', 'instagram'].map((social) => (
                     <a 
                       key={social}
                       href={`https://${social}.com`}

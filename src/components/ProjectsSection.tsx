@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Github, ExternalLink, Code } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -20,124 +19,79 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "E-commerce Platform",
-    description: "Uma plataforma de e-commerce completa com gerenciamento de produtos, carrinho de compras, pagamentos e painel de administração.",
+    title: "Technews",
+    description: "Um site web de noticias de tecnologia com integração com a API do NewsAPI.",
     image: "/placeholder.svg",
-    tags: ["React", "Node.js", "MongoDB", "Express", "Redux"],
-    githubUrl: "https://github.com",
-    demoUrl: "https://example.com",
+    tags: ["React", "Node.js", "SQLite", "RadixUI", "TailwindCSS", "JavaScript", "OAuth"],
+    githubUrl: "https://github.com/MichasISBACK/Technews",
+    demoUrl: "https://technewso.netlify.app",
     codeSnippet: {
-      language: "javascript",
-      code: `// Hook de carrinho de compras
-const useCart = () => {
-  const [items, setItems] = useState([]);
-  
-  const addItem = (product, quantity = 1) => {
-    setItems(prev => {
-      const exists = prev.find(item => 
-        item.id === product.id
-      );
+      language: "React.js",
+      code: `// Componente de callback para autenticação OAuth
+const AuthCallback = () => {
+  const { login } = useAuth();
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const token = params.get('token');
+    const userId = params.get('userId');
+
+    if (token && userId) {
+      console.log("Callback OAuth recebido. Buscando dados do usuário...");
       
-      if (exists) {
-        return prev.map(item => 
-          item.id === product.id 
-            ? { ...item, quantity: item.quantity + quantity }
-            : item
-        );
-      }
+      const fetchUserData = async () => {
+        try {
+          const userData = await authService.getUserData(userId, token);
+          login(userData, token);
+          window.history.replaceState({}, document.title, "/");
+        } catch (error) {
+          console.error("Erro no callback OAuth:", error);
+          window.location.href = "/";
+        }
+      };
       
-      return [...prev, { ...product, quantity }];
-    });
-  };
-  
-  // Mais métodos do carrinho...
-  
-  return { items, addItem };
+      fetchUserData();
+    } else {
+      console.log("Callback acessado sem token, redirecionando para home.");
+      window.location.href = "/";
+    }
+  }, [login]);
 };`
     }
   },
   {
     id: 2,
-    title: "Task Management App",
-    description: "Aplicativo de gerenciamento de tarefas com recursos de arrastar e soltar, categorização e notificações.",
+    title: "TExploração e Análise de Vulnerabilidades em Flask",
+    description: "O objetivo do laboratório é executar um backend vulnerável, identificar falhas críticas e elaborar um relatório técnico documentando o processo de exploração e mitigação.",
     image: "/placeholder.svg",
-    tags: ["React", "TypeScript", "Firebase", "TailwindCSS"],
-    githubUrl: "https://github.com",
-    demoUrl: "https://example.com",
+    tags: ["Python", "Flask", "SQLite"],
+    githubUrl: "https://github.com/MichasISBACK/Exploit-Mobile-Sistemas-da-Informa-o",
     codeSnippet: {
-      language: "typescript",
-      code: `// Task drag and drop functionality
-const DraggableTask: React.FC<TaskProps> = ({ task }) => {
-  const [{ isDragging }, dragRef] = useDrag({
-    type: 'TASK',
-    item: { id: task.id, status: task.status },
-    collect: (monitor) => ({
-      isDragging: monitor.isDragging(),
-    }),
-  });
+      language: "python",
+      code: `// Lab Mobile - Backend Vulnerável
+    app = Flask(__name__)
 
-  return (
-    <div 
-      ref={dragRef}
-      className={\`task-card \${isDragging ? 'opacity-50' : ''}\`}
-    >
-      <h3>{task.title}</h3>
-      <p>{task.description}</p>
-      <div className="task-tags">
-        {task.tags.map(tag => (
-          <span key={tag}>{tag}</span>
-        ))}
-      </div>
-    </div>
+DATA_FILE = 'db_plain.json'
+UPLOAD_FOLDER = 'uploads'
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+
+def read_db():
+    if not os.path.exists(DATA_FILE):
+        return {"users": []}
+    with open(DATA_FILE, 'r') as f:
+        return json.load(f)
+
+def write_db(data):
+    with open(DATA_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+@app.route('/health', methods=['GET'])
+def health():
+    return jsonify({"status": "ok", "time": str(datetime.utcnow())})
   );
 };`
     }
   },
-  {
-    id: 3,
-    title: "Real-time Chat Application",
-    description: "Aplicativo de chat em tempo real com recursos de mensagens privadas, salas de chat e notificações.",
-    image: "/placeholder.svg",
-    tags: ["React", "Socket.io", "Express", "MongoDB", "JWT"],
-    githubUrl: "https://github.com",
-    codeSnippet: {
-      language: "javascript",
-      code: `// Socket.io server setup
-io.on('connection', (socket) => {
-  console.log('New client connected');
-  
-  socket.on('join_room', ({ roomId, user }) => {
-    socket.join(roomId);
-    
-    socket.to(roomId).emit('user_joined', {
-      user,
-      message: \`\${user.name} joined the chat\`
-    });
-    
-    // Handle active users in the room
-    const roomUsers = getUsersInRoom(roomId);
-    io.to(roomId).emit('room_users', roomUsers);
-  });
-  
-  socket.on('send_message', ({ roomId, message }) => {
-    io.to(roomId).emit('receive_message', message);
-    
-    // Save message to database
-    saveMessageToDb(message)
-      .then(() => console.log('Message saved'))
-      .catch(err => console.error('Error saving message:', err));
-  });
-});`
-    }
-  },
-  {
-    id: 4,
-    title: "Dashboard Analytics",
-    description: "Dashboard para visualização de dados de negócios com gráficos interativos e relatórios exportáveis.",
-    image: "/placeholder.svg",
-    tags: ["React", "Node.js", "PostgreSQL", "Material UI"],
-    githubUrl: "https://github.com",
-  }
 ];
 
 const ProjectsSection = () => {

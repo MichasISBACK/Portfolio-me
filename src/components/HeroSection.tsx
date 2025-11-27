@@ -142,15 +142,15 @@ const HeroSection = () => {
           </div>
           <pre className="text-[14px] p-4 overflow-x-auto">
             <code>
-              <div className="code-line"><span className="text-blue-400">class</span> <span className="text-yellow-300">Developer</span> {`{`}</div>
-              <div className="code-line pl-6"><span className="text-purple-400">constructor</span>() {`{`}</div>
-              <div className="code-line pl-12"><span className="text-green-400">this</span>.<span className="text-blue-300">name</span> = <span className="text-orange-300">'Seu Nome'</span>;</div>
+              <div className="code-line"><span className="text-blue-400">class</span> <span className="text-yellow-300">Desenvolvedor</span> {`{`}</div>
+              <div className="code-line pl-6"><span className="text-purple-400">Construtor</span>() {`{`}</div>
+              <div className="code-line pl-12"><span className="text-green-400">this</span>.<span className="text-blue-300">nome</span> = <span className="text-orange-300">'Luis Eduardo Michaud'</span>;</div>
               <div className="code-line pl-12"><span className="text-green-400">this</span>.<span className="text-blue-300">stack</span> = [<span className="text-orange-300">'JavaScript'</span>, <span className="text-orange-300">'React'</span>, <span className="text-orange-300">'Node.js'</span>];</div>
               <div className="code-line pl-12"><span className="text-green-400">this</span>.<span className="text-blue-300">isAvailableForHire</span> = <span className="text-purple-400">true</span>;</div>
               <div className="code-line pl-6">{`}`}</div>
               <div className="code-line">&nbsp;</div>
               <div className="code-line pl-6"><span className="text-purple-400">code</span>() {`{`}</div>
-              <div className="code-line pl-12"><span className="text-blue-400">return</span> <span className="text-orange-300">'Clean, efficient solutions'</span>;</div>
+              <div className="code-line pl-12"><span className="text-blue-400">return</span> <span className="text-orange-300">'Limpo, Soluções Eficientes'</span>;</div>
               <div className="code-line pl-6">{`}`}</div>
               <div className="code-line">&nbsp;</div>
               <div className="code-line pl-6"><span className="text-purple-400">solve</span>(<span className="text-blue-300">problem</span>) {`{`}</div>
@@ -160,7 +160,7 @@ const HeroSection = () => {
               <div className="code-line">{`}`}</div>
               <div className="code-line">&nbsp;</div>
               <div className="code-line"><span className="text-purple-400">const</span> <span className="text-blue-300">me</span> = <span className="text-blue-400">new</span> <span className="text-yellow-300">Developer</span>();</div>
-              <div className="code-line"><span className="text-blue-300">me</span>.<span className="text-purple-400">code</span>();</div>
+              <div className="code-line"><span className="text-blue-300">eu</span>.<span className="text-purple-400">code</span>();</div>
             </code>
           </pre>
         </div>
