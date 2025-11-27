@@ -21,7 +21,7 @@ const projects: Project[] = [
     id: 1,
     title: "Technews",
     description: "Um site web de noticias de tecnologia com integração com a API do NewsAPI.",
-    image: "/placeholder.svg",
+    image: "/news.png",
     tags: ["React", "Node.js", "SQLite", "RadixUI", "TailwindCSS", "JavaScript", "OAuth"],
     githubUrl: "https://github.com/MichasISBACK/Technews",
     demoUrl: "https://technewso.netlify.app",
@@ -61,9 +61,9 @@ const AuthCallback = () => {
   },
   {
     id: 2,
-    title: "TExploração e Análise de Vulnerabilidades em Flask",
+    title: "Exploração e Análise de Vulnerabilidades em Flask",
     description: "O objetivo do laboratório é executar um backend vulnerável, identificar falhas críticas e elaborar um relatório técnico documentando o processo de exploração e mitigação.",
-    image: "/placeholder.svg",
+    image: "/react-js.png",
     tags: ["Python", "Flask", "SQLite"],
     githubUrl: "https://github.com/MichasISBACK/Exploit-Mobile-Sistemas-da-Informa-o",
     codeSnippet: {
