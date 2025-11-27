@@ -16,7 +16,7 @@ const AboutSection = () => {
             <h3 className="text-2xl font-semibold font-poppins">Minha trajetória na tecnologia</h3>
             <p className="text-foreground/80 leading-relaxed">
               Sou um profissional de TI apaixonado por criar soluções tecnológicas que resolvem problemas reais.
-              Com mais de X anos de experiência no desenvolvimento de aplicações web e sistemas,
+              Com mais de 2 anos de experiência no desenvolvimento de aplicações web e sistemas,
               combinando habilidades técnicas com uma mentalidade orientada a resultados.
             </p>
             <p className="text-foreground/80 leading-relaxed">
